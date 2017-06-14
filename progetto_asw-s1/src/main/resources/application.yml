@@ -1,0 +1,33 @@
+# application.yml
+--- 
+spring: 
+  application: 
+    name: s1
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: http://eureka:8761/eureka/
+# leave eureka.instance.leaseRenewalIntervalInSeconds unchanged in production
+# just here to provide quicker updates to Eureka for demos
+#  instance: 
+#    leaseRenewalIntervalInSeconds: 5
+#    metadataMap: 
+#      instanceId: ${spring.application.name}:${random.value}
+server: 
+#  port: ${PORT:${SERVER_PORT:0}}
+  port: 8080
+words: to,pass,the,test
+
+--- 
+spring: 
+  profiles: fondazione
+  application: 
+    name: fondazione
+years: 3 Novembre 1911,7 marzo 1916,16 Luglio 1909,6 Luglio 1926,11 Luglio 1899,26 Dicembre 1933,4 Aprile 1857,1 Ottobre 1898,9 Giugno 1944
+places: Stoccarda - Germania,Torino - Italia,Monaco - Germania,Detroit - Michigan,Parigi - Francia,Kyoto - Giappone,Londra - Inghilterra,Berlino - Germania,Los Angeles - California
+#server: 
+#  port: 8080
+
+  
+
+
