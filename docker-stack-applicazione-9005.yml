@@ -1,0 +1,52 @@
+version: '3'
+services:
+  eureka:
+    image: swarm.inf.uniroma3.it:5000/server-eureka-9005
+#    container_name: eureka 
+#    ports:
+#    - "8761:8761"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+  machine:
+    image: swarm.inf.uniroma3.it:5000/service-s-9005
+#    ports: 
+#    - "8080"
+    depends_on:
+    - "eureka"
+    command: ["-jar", "-Dspring.profiles.active=machine", "progetto_asw-s.jar"]
+    deploy:
+      mode: replicated
+      replicas: 1    
+  s1:
+    image: swarm.inf.uniroma3.it:5000/service-s1-9005
+#    ports: 
+#    - "8080"
+    depends_on:
+    - "eureka"
+    command: ["-jar", "-Dspring.profiles.active=s1", "progetto_asw-s1.jar"]
+    deploy:
+      mode: replicated
+      replicas: 1    
+  s2:
+    image: swarm.inf.uniroma3.it:5000/service-s2-9005
+#    ports: 
+#    - "8080"
+    depends_on:
+    - "eureka"
+    command: ["-jar", "-Dspring.profiles.active=s2", "progetto_asw-s2.jar"]
+    deploy:
+      mode: replicated
+      replicas: 1    
+  zuul:
+    image: swarm.inf.uniroma3.it:5000/gateway-zuul-9005
+#    container_name: zuul 
+    depends_on:
+    - "eureka"
+    ports:
+    - "9005:8080"
+
+
+
+
+
