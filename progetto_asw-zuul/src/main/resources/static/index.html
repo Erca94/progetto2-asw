@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Machine services</title>
+</head>
+
+<body>
+	<h1>Machine services</h1>
+	<p>
+		<a href="/machine/Ford">Generazione di informazioni casuali con solo casa automobilistica</a>
+	</p>
+	<p>
+		<a href="/machine/Mercedes/Italia">Generazione di informazioni casuali con casa automobilistica e paese</a>
+	</p>
+	
+	<p>
+		<a href="/s1/Ford">Generazione di informazioni casuali sulla fondazione della casa automobilistica</a>
+	</p>
+	<p>
+		<a href="/s2/Mercedes/Italia">Generazione di informazioni casuali sui modelli venduti dalla casa automobilistica in un dato paese</a>
+	</p>
+	
+	<p>
+		<a href="/s2/Mercedes">Generazione di informazioni casuali sui modelli totali venduti dalla casa automobilistica</a>
+	</p>
+	
+	<br>
+	<h2>Servizio S</h2>
+	<p></p>
+	Il servizio principale S fornisce informazioni (casuali) sulle case automobilistiche e si avvale di due operazioni:
+	
+	<ul>
+	<li> <i>/S/{casa-automobilistica}/{paese}</i> restituisce informazioni (casuali) sulla <i>casa-automobilistica</i> (anno e luogo di fondazione) e sul numero (casuale) delle vendite nel <i>paese</i> indicato.</li>
+	<li> <i>/S/{casa-automobilistica}</i> restituisce invece informazioni (sempre casuali) sulla <i>casa-automobilistica</i> (anno e luogo di fondazione) e sul numero (sempre casuale) di modelli venduti nel totale.</li>
+	</ul>
+	
+	<h2>Servizio S1</h2>
+	
+	<p></p>
+	Il servizio S1 fornisce un'operazione:
+	<ul>
+	<li> <i>/S1/{casa-automobilistica}</i> restituisce anno e luogo di fondazione (casuale) della indicata.</li>
+	</ul>
+	
+	<h2>Servizio S2</h2>
+	
+	<p></p>
+	Il servizio S2 fornisce un'operazione:
+	<ul>
+	<li> <i>/S2/{casa-automobilistica}/{paese}</i> restituisce il numero (casuale) delle vendite della <i>casa-automobilistica</i> nel <i>paese</i> indicato.</li>
+	<li> <i>/S2/{casa-automobilistica}</i> restituisce invece il numero (casuale) totale di tutte le vendite della <i>casa-automobilistica</i>.</li>
+	</ul>
+	
+	<h3>Nota bene</h3>
+	<p></p>
+	
+	I servizi generano informazioni statiche (non casuali) rispettivamente con:
+	<ul>
+	<li>/Chevrolet oppure /Chevrolet/USA</li>
+	<li>/Fiat oppure /Fiat/Italia</li>
+	</ul>
+</body>
+</html>
