@@ -53,6 +53,5 @@ Il servizio S deve rispondere al suo client usufruendo dei servizi S1 e S2 e int
 ## Esecuzione
 
 L'applicazione è accessibile mediante gli URL: 
-* http://swarm.inf.uniroma3.it:9005/machine/{casa_automobilistica}/{paese}
-* http://swarm.inf.uniroma3.it:9005/machine/{casa_automobilistica}
+* http://swarm.inf.uniroma3.it:9005
 
